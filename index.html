@@ -1,0 +1,78 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="./MiyukiDesktop/System32/styles/desktop-core.css">
+    <link rel="stylesheet" href="./MiyukiDesktop/System32/styles/taskbar.css">
+    <link rel="stylesheet" href="./MiyukiDesktop/System32/styles/startmenu.css">
+    <link rel="stylesheet" href="./MiyukiDesktop/System32/styles/components.css">
+    <link rel="stylesheet" href="./MiyukiDesktop/System32/styles/demo.css">
+
+    <script src="MiyukiDesktop/System32/dwm.js"></script>
+    <script src="MiyukiDesktop/System32/windowDrag.js"></script>
+
+<body>
+    <div class="Sys_StartMenu" style="display: none;" id="@SystemUI/Desktop/StartMenu">
+        <section>
+            <div class="rt-container">
+                <div class="col-rt-12">
+                    <div class="wrapper">
+                        <div class="wrap">
+                            <h3 class="Start">Startup</h3>
+                            <div class="btn-small purple"> <i class="fa fa-fighter-jet fa-2x"></i> <span
+                                    class="label bottom">Settings</span> </div>
+                            <div onclick="StartMenuHandler.onStartClick()"class="btn-big desktop"> <i class="fa fa-lock fa-2x"></i> <span
+                                    class="label bottom">Desktop</span> </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="SysDesktop" id="@SystemUI/Desktop">
+        <div class="SysWindow" id="@Programs/testwindow" style="left: 147px;top: 218px;width: 500px; height:180px;">
+            <div class="SysWindowTitle" id="testwindow draggable">
+                <img src="MiyukiDesktop/SystemResources/placeholder-startmenu.png">
+                <p>Miyuki Desktop</p>
+                <ul class="window_control">
+                    <li class="min"><img src="MiyukiDesktop/SystemResources/minimize-unfocused.png" onmouseover="this.src='MiyukiDesktop/SystemResources/minimize-focused.png'" onmouseout="this.src='MiyukiDesktop/SystemResources/minimize-unfocused.png'"></li>
+                    <li class="max" onclick="document.getElementById('testwindow').style = 'top: 0;left: 0;width: 100%; height: 100%';
+                    "><img src="MiyukiDesktop/SystemResources/maximize-unfocused.png" onmouseover="this.src='MiyukiDesktop/SystemResources/maximize-focused.png'" onmouseout="this.src='MiyukiDesktop/SystemResources/maximize-unfocused.png'"></li>
+                    <li class="close"><img src="MiyukiDesktop/SystemResources/close-unfocused.png" onmouseover="this.src='MiyukiDesktop/SystemResources/close-focused.png'" onmouseout="this.src='MiyukiDesktop/SystemResources/close-unfocused.png'"></li>
+                </ul>
+            </div><!-- 105 alpha value for focused-->
+            <div class="win-content">
+                <div class="win-content-internal">
+                    <h2>lol</h2>
+                    <p>basic window made, buttons aren't functional, but<br> you can't say that it doesn't looks awesome!</p>
+                </div>
+            </div>
+        </div>
+        <div class="SysTaskBar" id="@SystemUI/Desktop/Taskbar">
+            <div onclick="StartMenuHandler.onStartClick()" class="SysMenuButton"
+                id="@SystemUI/Desktop/Taskbar/StartMenuButton">
+                <img src="MiyukiDesktop/SystemResources/placeholder-startmenu.png">
+            </div>
+            <div class="SysOpenWindows">
+                <div class="WindowIcon Focused" id="@SystemApps/SpaceBrowser">
+                    <img src="MiyukiDesktop/SystemApps/SpaceBrowser/icon.png">
+                </div>
+                <div class="WindowIcon NotFocused" id="@SystemApps/SpaceBrowser">
+                    <img src="MiyukiDesktop/SystemApps/SpaceBrowser/icon.png">
+                </div>
+                <div class="WindowIcon" id="@SystemApps/SpaceBrowser">
+                    <img src="MiyukiDesktop/SystemApps/SpaceBrowser/icon.png">
+                </div>
+                <div class="WindowIcon" id="@SystemApps/SpaceBrowser">
+                    <img src="MiyukiDesktop/SystemApps/SpaceBrowser/icon.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        dragElement(document.getElementById("@Programs/testwindow"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+.SysDesktop, body, html {
+	width: 100%;
+	height: 100%;
+}
+
+.SysDesktop {
+    display: flex;
+    color: #fff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow: hidden;
+
+    background-color: black; /* tweak to show a black screen at loading*/
+    background-image: url("../../../MiyukiDesktop/SystemResources/default.jpg"); /* works as default */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    min-width: 100%;
+    min-height: 100%;
+    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.SysWindow {
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+.SysWindow {
+    box-shadow: 15px 0px 10px -10px rgba(0, 0, 0, 0.51);
+}
+
+.SysWindow {
+    position: absolute;
+    border: 1px solid rgba(49, 49, 49, 0.151);
+}
+
+.SysWindowTitle {
+    background-color: #4182d6ab;
+    backdrop-filter: blur(2px);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.SysWindowTitle {
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 100%;
+    font-style: normal;
+    color: #131313;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+}
+
+.SysWindowTitle img {
+    margin: 0;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 4;
+    margin-top: 4;
+}
+
+.SysWindowTitle ul.window_control {
+    position: absolute;
+    float: right;
+    top: -15;
+    right: 6;
+}
+
+.SysWindowTitle ul.window_control {
+    right: 1px;
+    overflow: hidden;
+}
+
+.SysWindowTitle ul li {
+    list-style: none;
+}
+
+.SysWindowTitle li {
+    margin: 0;
+    float: left;
+}
+
+.win-content {
+    position: absolute;
+    top: 31px;
+    margin: 0;
+    background-color: white;
+    color: #333333;
+    height: calc(100% - 31px);
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.SysWindowTitle p {
+    margin: 0;
+    position: relative;
+    top: 3;
+    left: 5;
+    font-size: 15;
+}
+
+.SysWindow {
+    -webkit-box-shadow: 15px 0px 10px -10px rgba(0,0,0,0.51);
+    -moz-box-shadow: 15px 0px 10px -10px rgba(0,0,0,0.51);
+    box-shadow: 15px 0px 10px -10px rgba(0,0,0,0.51);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
